@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Личный кабинет | MedDiagnostic{% endblock %}
+
+{% block content %}
+<section class="section-padding">
+    <div class="container">
+        <div class="page-header text-center">
+            <h1>Личный кабинет</h1>
+            <p>Информация о пользователе и быстрый доступ к записям</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card p-4 profile-card profile-info">
+                    <h3 class="mb-4">Данные пользователя</h3>
+                    <p><strong>Имя пользователя:</strong> {{ user.username }}</p>
+                    <p><strong>Email:</strong> {{ user.email|default:"Не указан" }}</p>
+
+                    <div class="mt-4 d-flex flex-wrap gap-2">
+                        <a href="{% url 'appointments:appointment_create' %}" class="btn btn-primary">
+                            Записаться на приём
+                        </a>
+                        <a href="{% url 'appointments:my_appointments' %}" class="btn btn-outline-secondary">
+                            Мои записи
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

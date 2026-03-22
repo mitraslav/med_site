@@ -1,0 +1,339 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+.navbar .nav-link {
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #9ec5fe;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #0d6efd, #6ea8fe);
+    color: #ffffff;
+    padding: 90px 0;
+}
+
+.hero-section h1 {
+    line-height: 1.2;
+}
+
+.section-title {
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: #495057;
+}
+
+.btn {
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+.btn-outline-primary,
+.btn-outline-secondary {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    vertical-align: middle;
+}
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+    min-height: 46px;
+    border: 1px solid #ced4da;
+    box-shadow: none;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.alert {
+    border-radius: 12px;
+}
+
+footer {
+    background-color: #212529;
+    color: #ffffff;
+    padding: 24px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 0.25rem;
+}
+
+.ratio iframe {
+    border-radius: 12px;
+}
+
+.auth-card,
+.profile-card,
+.form-card,
+.content-card {
+    border-radius: 18px;
+}
+
+.service-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.page-header {
+    margin-bottom: 2.5rem;
+}
+
+.page-header h1 {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.page-header p {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #6c757d;
+}
+
+.empty-state-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.doctor-card p,
+.service-card p {
+    margin-bottom: 0.75rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.75rem;
+}
+
+.profile-info p {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.status-new {
+    background-color: #cff4fc;
+    color: #055160;
+}
+
+.status-confirmed {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.status-completed {
+    background-color: #e2e3e5;
+    color: #41464b;
+}
+
+.status-canceled {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.shadow-soft {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.rounded-soft {
+    border-radius: 16px;
+}
+
+.bg-soft {
+    background-color: #f1f5f9;
+}
+
+.text-muted-custom {
+    color: #6c757d;
+}
+
+.list-check {
+    padding-left: 1.2rem;
+}
+
+.list-check li {
+    margin-bottom: 0.5rem;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.min-height-card {
+    min-height: 100%;
+}
+
+.border-soft {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.login-links,
+.register-links {
+    font-size: 0.95rem;
+}
+
+.hero-buttons .btn {
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding: 70px 0;
+        text-align: center;
+    }
+
+    .hero-section .btn {
+        width: 100%;
+        margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+        text-align: center;
+    }
+
+    .navbar .btn {
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        border-radius: 14px;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .table-responsive {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+    }
+
+    .form-control,
+    .form-select {
+        min-height: 44px;
+    }
+}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ service.title }} | MedDiagnostic{% endblock %}
+
+{% block content %}
+<section class="section-padding">
+    <div class="container">
+        <div class="card p-4 content-card">
+            <div class="mb-4">
+                <h1 class="mb-3">{{ service.title }}</h1>
+                <p class="lead mb-3">{{ service.short_description }}</p>
+                <p class="service-price mb-0">Стоимость: {{ service.price }} ₽</p>
+            </div>
+
+            <hr>
+
+            <div class="mt-3">
+                <h4 class="mb-3">Подробное описание услуги</h4>
+                <p>{{ service.full_description }}</p>
+            </div>
+
+            <div class="mt-4 d-flex flex-wrap gap-2">
+                <a href="{% url 'appointments:appointment_create' %}" class="btn btn-primary">
+                    Записаться на приём
+                </a>
+                <a href="{% url 'services:service_list' %}" class="btn btn-outline-secondary">
+                    Назад к услугам
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

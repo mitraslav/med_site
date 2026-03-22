@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Мои записи | MedDiagnostic{% endblock %}
+
+{% block content %}
+<section class="section-padding">
+    <div class="container">
+        <div class="page-header text-center">
+            <h1>Мои записи на приём</h1>
+            <p>Здесь отображаются все созданные вами записи</p>
+        </div>
+
+        <div class="card p-4 content-card">
+            {% if appointments %}
+                <div class="table-responsive">
+                    <table class="table table-striped align-middle">
+                        <thead>
+                            <tr>
+                                <th>Дата</th>
+                                <th>Время</th>
+                                <th>Врач</th>
+                                <th>Услуга</th>
+                                <th>Статус</th>
+                                <th>Комментарий</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for appointment in appointments %}
+                                <tr>
+                                    <td>{{ appointment.appointment_date }}</td>
+                                    <td>{{ appointment.appointment_time }}</td>
+                                    <td>{{ appointment.doctor.full_name }}</td>
+                                    <td>{{ appointment.service.title }}</td>
+                                    <td>
+                                        <span class="status-badge status-{{ appointment.status }}">
+                                            {{ appointment.get_status_display }}
+                                        </span>
+                                    </td>
+                                    <td>{{ appointment.comment|default:"—" }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <p class="mb-3">У вас пока нет записей на приём.</p>
+                    <a href="{% url 'appointments:appointment_create' %}" class="btn btn-primary">
+                        Записаться на приём
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}
