@@ -24,9 +24,12 @@ def appointment_create(request):
 
 @login_required
 def my_appointments(request):
-    appointments = Appointment.objects.filter(user=request.user)
+    appointments = Appointment.objects.filter(user=request.user).order_by(
+        '-appointment_date',
+        '-appointment_time',
+    )
     return render(
         request,
         'appointments/my_appointments.html',
-        {'appointments': appointments}
+        {'appointments': appointments},
     )
