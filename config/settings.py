@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 import os
+
+from django.conf.global_settings import LOGIN_REDIRECT_URL, LOGOUT_REDIRECT_URL
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -124,3 +126,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+
+LOGIN_REDIRECT_URL = 'main:home'
+LOGOUT_REDIRECT_URL = 'main:home'
+LOGIN_URL = 'users:login'
