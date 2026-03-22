@@ -337,3 +337,16 @@ footer p {
         min-height: 44px;
     }
 }
+
+.card-img-top {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.rounded-soft {
+    border-radius: 16px;
+}
