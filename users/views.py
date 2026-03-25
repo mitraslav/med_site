@@ -7,19 +7,19 @@ from .forms import UserRegisterForm
 
 
 def register(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
-            messages.success(request, 'Регистрация прошла успешно.')
-            return redirect('main:home')
+            messages.success(request, "Регистрация прошла успешно.")
+            return redirect("main:home")
     else:
         form = UserRegisterForm()
 
-    return render(request, 'users/register.html', {'form': form})
+    return render(request, "users/register.html", {"form": form})
 
 
 @login_required
 def profile(request):
-    return render(request, 'users/profile.html')
+    return render(request, "users/profile.html")

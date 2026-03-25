@@ -1,0 +1,6 @@
+[flake8]
+ignore = E226, E302, E41, W504
+exclude = migrations, venv, .git
+max-line-length = 160
+max-complexity = 10
+statistics = True
